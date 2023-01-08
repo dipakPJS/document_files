@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: #f5f6fa;
+    
+}
+
+form{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    border-bottom: 2px solid black;
+}
+
+.navbar span{
+    font-size: 30px;
+    font-weight: 900;
+
+}
+
+.navbar .btn{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+   
+    
+}
+
+.navbar .btn:hover{
+
+  cursor: pointer !important;
+
+}
+
+.navbar .btn-add{
+    margin-right: 20px;
+    background-color: rgb(0, 115, 255);
+    text-decoration: none;
+
+}
+
+.navbar #delete-product-btn{
+   background-color: red;
+}
+
+.product-list-section{
+    padding-top: 50px;
+}
+
+.main-product-list{
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    column-gap: 50px;
+    row-gap: 50px;
+}
+
+/* main product styling section starts */
+
+.main-product{
+    height: 300px;
+    width: auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.8;
+    background: #2C3A47;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+#delete-checkbox{
+    height: 30px;
+    width: 30px;
+    margin-right: 250px; 
+    margin-bottom: 10px;
+   }
+
+
+  
+  .main-product p, #delete-checkbox {
+    z-index: 1;
+  }
+  
+  .main-product::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    background-image: linear-gradient(180deg, green, yellow);
+    height: 200%;
+    animation: productBox 20s linear infinite;
+    transition: all 0.2s linear;
+  }
+  
+  @keyframes productBox {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .main-product::after {
+    content: '';
+    position: absolute;
+    background: #2C3A47;
+    inset: 5px;
+    border-radius: 15px;
+  }  
+/* main product styling section ends */
+
+.empty-post{
+    color: red;
+    font-size: 40px;
+    font-weight: 900;
+    
+}
+
+  /* ====== product add main form section starts ====== */
+
+  #product_form .form-section{
+    width: 90%;
+    margin: 0 auto;
+    
+  }
+
+  .btn-save{
+    background-color: green;
+    margin-right: 20px;
+
+  }
+
+  .btn-cancel{
+    background-color: rgb(32, 32, 32);
+    text-decoration: none;
+    
+  }
+
+
+  #product_form .main-form{
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+    width: 500px;
+   
+     
+  }
+
+   #product_form .form-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+ #product_form .form-div2 input{
+    height: 50px;
+    width: 300px;
+    padding: 0 10px;
+    caret-color: red;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 2px solid black;
+    
+  }
+
+
+/* == now styling for select */
+
+#productType{
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 70px;
+    border-radius: 5px;
+
+}
+
+ 
+.size, .weight, .height, .width, .length{
+  display: none;
+}
+
+  /* ====== product add main form section ends ====== */
+
+ /* ========= product-add-section styling ends ========== */
